@@ -1,7 +1,7 @@
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import speech_recognition as sr
 recognizer = sr.Recognizer()
-with sr.Microphone as source:
+with sr.Microphone() as source:
   print("Clearing background noise...")
   sr.adjust_for_ambient_noise(source, duration=1)
   print("Waiting for message....")
